@@ -41,7 +41,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Victor",
+    "name": "Viktor",
     "jobTitle": "QA Tester",
     "email": "mailto:you@example.com",
     "knowsAbout": [
@@ -50,6 +50,7 @@
     ]
   }
   </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
   <!-- Header -->
@@ -59,11 +60,14 @@
       <nav class="hidden md:flex gap-6 text-sm">
         <a href="#about" class="hover:text-sky-500">About</a>
         <a href="#skills" class="hover:text-sky-500">Skills</a>
-        <a href="#experience" class="hover:text-sky-500">Experience</a>
+        <a href="#tech" class="hover:text-sky-500">Tech</a>
+        <a href="#learning" class="hover:text-sky-500">Learning</a>
+        <a href="#strategy" class="hover:text-sky-500">Strategy</a>
+        <a href="#kafka-perf" class="hover:text-sky-500">Kafka</a>
         <a href="#projects" class="hover:text-sky-500">Projects</a>
       </nav>
       <div class="flex items-center gap-2">
-        <a href="#contact" class="hidden sm:inline-flex items-center rounded-xl bg-sky-500 text-white px-4 py-2 text-sm font-semibold shadow hover:bg-sky-600">Hire me</a>
+        <a href="#projects" class="hidden sm:inline-flex items-center rounded-xl bg-sky-500 text-white px-4 py-2 text-sm font-semibold shadow hover:bg-sky-600">Projects</a>
         <button aria-label="Toggle theme" onclick="setTheme(!document.documentElement.classList.contains('dark'))" class="rounded-xl border px-3 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800">🌗</button>
       </div>
     </div>
@@ -76,15 +80,13 @@
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
           <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
-            QA Tester focused on <span class="text-sky-500">infrastructure-quality</span>
+            QA Tester focused on <span class="text-sky-500">microservices quality</span>
           </h1>
           <p class="mt-5 text-lg text-slate-600 dark:text-slate-300">
             I’m a QA tester seeking a new role. I specialize in validating complex, cloud-native platforms and data pipelines, bringing reliability to deployments and CI/CD at scale.
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#contact" class="inline-flex items-center rounded-xl bg-sky-500 text-white px-5 py-3 text-sm font-semibold shadow hover:bg-sky-600">Contact Me</a>
             <a href="#projects" class="inline-flex items-center rounded-xl border px-5 py-3 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">View Projects</a>
-            <a href="#" id="downloadCV" class="inline-flex items-center rounded-xl border px-5 py-3 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">Download CV</a>
           </div>
         </div>
         <div class="md:justify-self-end">
@@ -106,19 +108,19 @@
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl font-bold">About</h2>
       <p class="mt-4 max-w-3xl text-slate-700 dark:text-slate-300">
-        <strong>Hi, I’m <span class="underline decoration-sky-500">Victor</span></strong> — a QA tester with a systems mindset. I’m currently completing a <strong>manual testing</strong> course and transitioning next to <strong>test automation with Playwright (Python)</strong>. I work closely with GitOps and platform teams to design reliable test plans, validate infrastructure changes, and prevent regressions in production.
+        <strong>Hi, I’m <span class="underline decoration-sky-500">Viktor</span></strong> — a QA tester focused on <strong>microservices</strong>. I test applications running in Kubernetes clusters (but not the clusters themselves). I use Helm/Kustomize and Argo CD to deploy and control app state, without validating those tools. I’m completing a <strong>manual testing</strong> course and moving into <strong>automation with Playwright (Python)</strong>.
       </p>
       <div class="mt-6 grid sm:grid-cols-2 gap-6">
         <div class="rounded-2xl border p-5 dark:border-slate-700">
           <h3 class="font-semibold mb-2">What I’m looking for</h3>
-          <p>Full-time QA / SDET / Infrastructure QA role on a modern stack (Kubernetes, GitLab CI, GitOps). On-site, hybrid, or remote.</p>
+          <p>Full-time QA / SDET on microservices with strong API focus and CI integration.</p>
         </div>
         <div class="rounded-2xl border p-5 dark:border-slate-700">
           <h3 class="font-semibold mb-2">Where I shine</h3>
           <ul class="list-disc ml-5 space-y-1">
-            <li>Designing test matrices for distributed systems (Kafka, PostgreSQL).</li>
-            <li>Validating Helm/Kustomize manifests, Argo CD rollouts, and cluster add‑ons (Longhorn, Vault).</li>
-            <li>Root-cause analysis across network, OS, container, and app layers.</li>
+            <li>End‑to‑end and API testing of microservices (REST/JSON).</li>
+            <li>Test design for services with queues/DBs (Kafka, PostgreSQL).</li>
+            <li>Reproducing issues across services using logs/traces and network captures.</li>
           </ul>
         </div>
       </div>
@@ -129,7 +131,7 @@
   <section id="skills" class="py-16 bg-slate-50/50 dark:bg-slate-800/30 border-y border-slate-100 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl font-bold">Core Skills</h2>
-      <p class="mt-2 text-slate-600 dark:text-slate-300">Hands-on with the following tools and platforms:</p>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">Tools I use to test microservices (the tools help me test apps; I don’t test the tools themselves):</p>
       <div class="mt-6">
         <div class="flex flex-wrap">
           <span class="tag">Kafka</span>
@@ -141,38 +143,70 @@
           <span class="tag">Linux</span>
           <span class="tag">Networking</span>
           <span class="tag">Wireshark</span>
-          <span class="tag">GitLab CI Runners</span>
+          <span class="tag">GitLab CI</span>
           <span class="tag">Argo CD</span>
           <span class="tag">Longhorn</span>
           <span class="tag">HashiCorp Vault</span>
         </div>
       </div>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border p-5 dark:border-slate-700">
-          <h3 class="font-semibold mb-2">Testing</h3>
-          <ul class="list-disc ml-5 space-y-1 text-sm">
-            <li>Functional, integration, and regression testing</li>
-            <li>Smoke and sanity checks for releases</li>
-            <li>Test case design and traceability</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border p-5 dark:border-slate-700">
-          <h3 class="font-semibold mb-2">Environment</h3>
-          <ul class="list-disc ml-5 space-y-1 text-sm">
-            <li>Cluster provisioning & configuration review</li>
-            <li>Helm/Kustomize validation in CI</li>
-            <li>Secrets and storage workflows (Vault, Longhorn)</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border p-5 dark:border-slate-700">
-          <h3 class="font-semibold mb-2">Observability</h3>
-          <ul class="list-disc ml-5 space-y-1 text-sm">
-            <li>Log & metrics driven verification</li>
-            <li>Packet-level debugging with Wireshark</li>
-            <li>Incident reproduction & reporting</li>
-          </ul>
-        </div>
-      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="tech" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold">Tech Stack</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">Primary tools I use to test microservices (icons are for apps/tools I work with; I test the <em>applications</em> that run on them):</p>
+      <ul class="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center">
+        <li class="flex flex-col items-center gap-2">
+          <i class="devicon-python-plain colored text-5xl"></i>
+          <span class="text-sm">Python</span>
+        </li>
+        <li class="flex flex-col items-center gap-2">
+          <span class="text-5xl">🎭</span>
+          <span class="text-sm">Playwright</span>
+        </li>
+        <li class="flex flex-col items-center gap-2">
+          <i class="devicon-apachekafka-original colored text-5xl"></i>
+          <span class="text-sm">Kafka</span>
+        </li>
+        <li class="flex flex-col items-center gap-2">
+          <i class="devicon-postgresql-plain colored text-5xl"></i>
+          <span class="text-sm">PostgreSQL</span>
+        </li>
+        <li class="flex flex-col items-center gap-2">
+          <i class="devicon-kubernetes-plain colored text-5xl"></i>
+          <span class="text-sm">Kubernetes</span>
+        </li>
+        <li class="flex flex-col items-center gap-2">
+          <i class="devicon-ansible-plain colored text-5xl"></i>
+          <span class="text-sm">Ansible</span>
+        </li>
+        <li class="flex flex-col items-center gap-2">
+          <i class="devicon-linux-plain colored text-5xl"></i>
+          <span class="text-sm">Linux</span>
+        </li>
+        <li class="flex flex-col items-center gap-2">
+          <i class="devicon-gitlab-plain colored text-5xl"></i>
+          <span class="text-sm">GitLab CI</span>
+        </li>
+        <li class="flex flex-col items-center gap-2">
+          <span class="text-5xl">🧩</span>
+          <span class="text-sm">Helm</span>
+        </li>
+        <li class="flex flex-col items-center gap-2">
+          <span class="text-5xl">🧱</span>
+          <span class="text-sm">Kustomize</span>
+        </li>
+        <li class="flex flex-col items-center gap-2">
+          <span class="text-5xl">🧭</span>
+          <span class="text-sm">Argo CD</span>
+        </li>
+        <li class="flex flex-col items-center gap-2">
+          <span class="text-5xl">🔐</span>
+          <span class="text-sm">Vault</span>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -194,18 +228,18 @@
           <h3 class="font-semibold mb-2">Automation (next: Playwright + Python)</h3>
           <ul class="list-disc ml-5 space-y-1 text-sm">
             <li>Page Object Model & fixtures</li>
-            <li>Parallel runs in CI (GitLab CI Runners)</li>
+            <li>Parallel runs in CI (GitLab CI)</li>
             <li>Test data & environment strategies</li>
             <li>Reports (HTML, trace viewer) & screenshots</li>
           </ul>
         </div>
         <div class="rounded-2xl border p-5 dark:border-slate-700">
-          <h3 class="font-semibold mb-2">Infra‑aware QA</h3>
+          <h3 class="font-semibold mb-2">Microservices QA (app‑level)</h3>
           <ul class="list-disc ml-5 space-y-1 text-sm">
-            <li>Validate Helm/Kustomize, Argo CD rollouts</li>
-            <li>Kafka/PostgreSQL functional checks</li>
-            <li>Network debugging (Wireshark)</li>
-            <li>Storage & secrets (Longhorn, Vault)</li>
+            <li>API tests (functional, negative, contract via OpenAPI)</li>
+            <li>Message flows with Kafka (produce/consume checks)</li>
+            <li>Data integrity with PostgreSQL; idempotency & retries</li>
+            <li>Deploy via Helm / manage via Argo CD (not testing these tools)</li>
           </ul>
         </div>
       </div>
@@ -257,30 +291,189 @@ Postconditions: ...</code></pre>
     </div>
   </section>
 
-  <!-- Experience -->
-  <section id="experience" class="py-16">
+  <!-- Microservices QA Strategy -->
+  <section id="strategy" class="py-16 bg-slate-50/50 dark:bg-slate-800/30 border-y border-slate-100 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-bold">Experience</h2>
-      <div class="mt-6 grid gap-6">
-        <!-- Example role block. Duplicate and edit as needed. -->
-        <article class="rounded-2xl border p-5 dark:border-slate-700">
-          <header class="flex items-center justify-between gap-4">
-            <h3 class="font-semibold">QA Tester</h3>
-            <span class="text-sm text-slate-500">2022 — 2025</span>
-          </header>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Validated Kubernetes-based services (Kafka, PostgreSQL) across staging and production. Partnered with DevOps on GitLab CI pipelines and Argo CD rollouts.</p>
-          <ul class="mt-3 list-disc ml-5 space-y-1 text-sm">
-            <li>Built test plans for Helm/Kustomize deployments; caught critical misconfigurations pre-release.</li>
-            <li>Improved incident reproduction time by 40% using protocol traces (Wireshark) and structured logs.</li>
-            <li>Hardened secrets and storage flows leveraging Vault and Longhorn scenarios.</li>
+      <h2 class="text-2xl font-bold">Microservices QA Strategy</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border p-5 dark:border-slate-700">
+          <h3 class="font-semibold mb-2">Functional & Contract</h3>
+          <ul class="list-disc ml-5 space-y-1 text-sm">
+            <li>Test pyramid: unit → API → UI (lean UI, strong API)</li>
+            <li>Contract checks against OpenAPI (schemas, status codes)</li>
+            <li>Idempotency, retries, and eventual consistency scenarios</li>
+            <li>Test data seeding & isolating environments</li>
           </ul>
-        </article>
+        </div>
+        <div class="rounded-2xl border p-5 dark:border-slate-700">
+          <h3 class="font-semibold mb-2">Observability & Non‑functional</h3>
+          <ul class="list-disc ml-5 space-y-1 text-sm">
+            <li>Trace/log assertions to localize cross‑service failures</li>
+            <li>Performance: API latency budgets & throughput</li>
+            <li>Resilience checks (timeouts, backoff, circuit‑breaker behavior)</li>
+            <li>Security basics: auth flows, roles, secret handling (app‑level)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border p-5 dark:border-slate-700">
+          <h3 class="font-semibold mb-3">API Test — pytest + requests</h3>
+          <pre class="text-xs bg-slate-900 text-slate-100 rounded-xl p-4 overflow-auto"><code>import requests
+
+BASE = "https://api.example.com"
+
+def test_create_order_happy_path():
+    r = requests.post(f"{BASE}/orders", json={"sku": "ABC", "qty": 1})
+    assert r.status_code == 201
+    data = r.json()
+    assert data["status"] == "CREATED"
+    # Follow the saga
+    r2 = requests.get(f"{BASE}/orders/{data['id']}")
+    assert r2.json()["status"] in {"CREATED","PROCESSING","DONE"}</code></pre>
+        </div>
+        <div class="rounded-2xl border p-5 dark:border-slate-700">
+          <h3 class="font-semibold mb-3">Kafka Load Smoke — Python producer</h3>
+          <pre class="text-xs bg-slate-900 text-slate-100 rounded-xl p-4 overflow-auto"><code>from confluent_kafka import Producer
+import time
+
+conf = {"bootstrap.servers": "localhost:9092"}
+p = Producer(conf)
+
+def delivery(err, msg):
+    if err:
+        print(f"DELIVERY_ERR: {err}")
+
+start = time.time(); n = 10000
+for i in range(n):
+    p.produce("orders", key=str(i), value=f"{{'id':{i},'ts':{time.time()}}}".encode(), callback=delivery)
+    if i % 1000 == 0: p.flush()
+
+p.flush()
+print("sent_per_sec=", n / (time.time() - start))</code></pre>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Extend with consumers, end‑to‑end latency, and failure scenarios (broker down, slow consumer, large payloads).</p>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded-2xl border p-5 dark:border-slate-700">
+        <h3 class="font-semibold mb-3">UI E2E — Playwright (Python)</h3>
+        <pre class="text-xs bg-slate-900 text-slate-100 rounded-xl p-4 overflow-auto"><code>from playwright.sync_api import sync_playwright
+
+BASE = "https://shop.example.com"
+
+def test_checkout_flow():
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+        page.goto(BASE)
+        page.get_by_role("button", name="Add to cart").click()
+        page.get_by_role("link", name="Cart").click()
+        page.get_by_role("button", name="Checkout").click()
+        page.get_by_label("Email").fill("qa@example.com")
+        page.get_by_role("button", name="Place order").click()
+        page.wait_for_url("**/order/**")
+        assert page.locator("text=Thank you").is_visible()
+        browser.close()</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Test Environment & Data -->
+  <section id="env-data" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold">Test Environment & Data</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border p-5 dark:border-slate-700">
+          <h3 class="font-semibold mb-2">Environments</h3>
+          <ul class="list-disc ml-5 space-y-1 text-sm">
+            <li>App deployed to Kubernetes via Helm/Argo CD (tools used for deploy/control, not objects of testing)</li>
+            <li>Isolated namespaces per branch; seeded services (Kafka, PostgreSQL)</li>
+            <li>Feature flags & configs captured per test run</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border p-5 dark:border-slate-700">
+          <h3 class="font-semibold mb-2">Test Data</h3>
+          <ul class="list-disc ml-5 space-y-1 text-sm">
+            <li>Factories/fixtures for stable IDs and edge cases</li>
+            <li>Synthetic Kafka messages for flows; anonymized DB snapshots</li>
+            <li>Reset scripts & idempotent setup/teardown</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- API Contract Testing (OpenAPI) -->
+  <section id="contract" class="py-16 bg-slate-50/50 dark:bg-slate-800/30 border-y border-slate-100 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold">API Contract Testing (OpenAPI)</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border p-5 dark:border-slate-700">
+          <h3 class="font-semibold mb-3">Spec Snippet</h3>
+          <pre class="text-xs bg-slate-900 text-slate-100 rounded-xl p-4 overflow-auto"><code>openapi: 3.0.3
+paths:
+  /orders:
+    post:
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+components:
+  schemas:
+    Order:
+      type: object
+      required: [id,status]
+      properties:
+        id: { type: string }
+        status: { type: string, enum: [CREATED, PROCESSING, DONE] }</code></pre>
+        </div>
+        <div class="rounded-2xl border p-5 dark:border-slate-700">
+          <h3 class="font-semibold mb-3">pytest contract check</h3>
+          <pre class="text-xs bg-slate-900 text-slate-100 rounded-xl p-4 overflow-auto"><code>import requests, jsonschema, yaml
+
+SPEC = yaml.safe_load(open("openapi.yaml"))
+ORDER = SPEC["components"]["schemas"]["Order"]
+
+def test_order_contract():
+    r = requests.post("https://api.example.com/orders", json={"sku":"ABC","qty":1})
+    assert r.status_code == 201
+    jsonschema.validate(instance=r.json(), schema=ORDER)</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kafka Performance Scenarios -->
+  <section id="kafka-perf" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold">Kafka Performance Scenarios</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border p-5 dark:border-slate-700">
+          <h3 class="font-semibold mb-2">Throughput & Latency</h3>
+          <ul class="list-disc ml-5 space-y-1 text-sm">
+            <li>End‑to‑end latency: produce → process → persist</li>
+            <li>Batch size, acks, linger, compression variations</li>
+            <li>Consumer lag under load; max sustainable TPS</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border p-5 dark:border-slate-700">
+          <h3 class="font-semibold mb-2">Backpressure & Edge Cases</h3>
+          <ul class="list-disc ml-5 space-y-1 text-sm">
+            <li>Slow consumer, paused partitions, rebalancing</li>
+            <li>Large messages, retries, DLQ routing</li>
+            <li>Broker/node restarts; ordering & idempotency checks</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="py-16 bg-slate-50/50 dark:bg-slate-800/30 border-y border-slate-100 dark:border-slate-800">
+    <div class="max-w-6xl mx_auto px-4"></div>
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl font-bold">Highlighted Projects</h2>
       <div class="mt-6 grid md:grid-cols-3 gap-6">
@@ -300,22 +493,16 @@ Postconditions: ...</code></pre>
     </div>
   </section>
 
-  
   <!-- Footer -->
   <footer class="py-10 border-t border-slate-100 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4 text-sm text-slate-500 flex flex-wrap items-center justify-between gap-3">
-      <span>© <span id="year"></span> Victor — QA Tester</span>
+      <span>© <span id="year"></span> Viktor — QA Tester</span>
       <a href="#home" class="hover:text-sky-500">Back to top ↑</a>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('downloadCV').addEventListener('click', function(e){
-      e.preventDefault();
-      alert('Replace this link with your actual CV file URL.');
-    });
   </script>
 </body>
 </html>
-
